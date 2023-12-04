@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f1f3f4;
+    font-family: sans-serif;
+    background: url(https://hdqwalls.com/download/nature-scenery-wallpaper-2560x1440.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.top-nav-bar {
+    height: 57px;
+    top: 0;
+    position: sticky;
+    background: #fff;
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgb(97, 6, 6);
+    z-index: 2;
+}
+ .link{
+    text-decoration: none;
+}
+.logo {
+    color: blueviolet;
+    font-size: 30px;
+    font-weight: 900;
+    height: 40px;
+    margin: 5px 10px;
+}
+
+.form-control {
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 3px;
+    border: 1px solid rgb(141, 76, 76) !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.input-group-text {
+    background: rgb(235, 31, 31) !important;
+    border: 1px solid rgb(197, 12, 12) !important;
+    margin: 8.5px 10px 3px 0 !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 20 px !important;
+    border-bottom-right-radius: 20px !important;
+    cursor: pointer;
+}
+
+.search-box {
+    display: inline-flex;
+    width: 50%;
+}
+
+.fa-search {
+    color: #fff;
+}
+
+.menu-bar {
+    width: 40%;
+    height: 57px;
+    float: right;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    float: right;
+}
+
+.menu-bar ul li {
+    border-left: 1px solid #fff;
+    list-style-type: none;
+    padding: 15px 35px;
+    text-align: center;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.menu-bar ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-basket-shopping {
+    margin-right: 5px;
+}
+
+@media (max-width:870px) {
+    .top-nav-bar {
+        height: 118px;
+        border-bottom: 0;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .menu-bar {
+        width: 100%;
+    }
+
+    .menu-bar ul {
+        margin: 10px 15px;
+        width: 100%;
+    }
+
+    .menu-bar ul li {
+        height: 57px;
+        width: 100%;
+    }
+
+}
+
+/* ---------ACCOUNT-PAGE------- */
+
+.wrapper{
+    margin: auto;
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(225,225,225,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* transition: height .2s ease; */
+}
+/* .wrapper.active{
+    height: 520px;
+
+} */
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+.wrapper .form-box.login{
+    /* display: none;  */
+transition: transform .18s ease;
+transform: translateX(0);
+}
+/* .wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+    } */
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.form-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+    font-weight: 600;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+ top:-5px ;   
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight:600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+.remember-forget{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forget label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+.remember-forget a{
+    color: #162938;
+    text-decoration: none;
+}
+.remember-forget a:hover{
+    text-decoration: underline;
+}
+
+.btn-1{
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #ccc;
+    font-weight: 500;
+}
+.login-register{
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-register p a{
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+
+/*------------- Footer Section----------- */
+
+.footer{
+    text-align: center;
+margin-top: 50px;
+background: black;
+color: white;
+}
+.footer h1{
+    font-size: 15px;
+    margin: 25px 40px;
+}
+.footer p{
+    margin: 60x 10px;
+    font-size: 12px;
+}
+.copywrite{
+   margin-bottom: -80px;
+   text-align: center; 
+   font-size: 15px;
+   padding-bottom: 20px;
+}
+.copywrite .fa-heart{
+   color: red;
+    font-size: 15px;
+}
+.footer hr{
+    margin-top: 10px;
+    background-color: #ccc;
+}
