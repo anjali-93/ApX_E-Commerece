@@ -20,9 +20,11 @@ body {
     border-bottom: 3px solid rgb(97, 6, 6);
     z-index: 2;
 }
- .link{
+
+.link {
     text-decoration: none;
 }
+
 .logo {
     color: blueviolet;
     font-size: 30px;
@@ -113,6 +115,12 @@ body {
         width: 100%;
     }
 
+    .menu-bar ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .menu-bar ul li {
         height: 57px;
         width: 100%;
@@ -122,49 +130,43 @@ body {
 
 /* ---------ACCOUNT-PAGE------- */
 
-.wrapper{
+.wrapper {
     margin: auto;
     position: relative;
     width: 400px;
     height: 440px;
     background: transparent;
-    border: 2px solid rgba(225,225,225,.5);
+    border: 2px solid rgba(225, 225, 225, .5);
     border-radius: 20px;
     backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* transition: height .2s ease; */
+    transition: .2s ease;
 }
-/* .wrapper.active{
-    height: 520px;
 
-} */
-.wrapper .form-box{
+
+.wrapper .form-box {
     width: 100%;
     padding: 40px;
 }
-.wrapper .form-box.login{
-    /* display: none;  */
-transition: transform .18s ease;
-transform: translateX(0);
-}
-/* .wrapper.active .form-box.login{
-    transition: none;
-    transform: translateX(-400px);
-}
-.wrapper .form-box.register{
-    position: absolute;
-    transition: none;
-    transform: translateX(400px);
-}
-.wrapper.active .form-box.register{
+
+.wrapper .form-box.login {
+
     transition: transform .18s ease;
     transform: translateX(0);
-    } */
-.wrapper .icon-close{
+}
+
+.wrapper .form-box.register {
+
+    transition: transform .18s ease;
+    transform: translateX(0);
+    margin-top: 35px;
+}
+
+.wrapper .icon-close {
     position: absolute;
     top: 0;
     right: 0;
@@ -180,20 +182,40 @@ transform: translateX(0);
     cursor: pointer;
     z-index: 1;
 }
-.form-box h2{
+
+@media (max-width:870px) {
+    .wrapper {
+
+        width: 350px;
+        height: 440px;
+
+    }
+
+    .wrapper .form-box.register .login-register {
+
+        transition: transform .18s ease;
+        transform: translateX(0);
+        margin: auto;
+
+    }
+}
+
+.form-box h2 {
     font-size: 2em;
     color: #162938;
     text-align: center;
     font-weight: 600;
 }
-.input-box{
+
+.input-box {
     position: relative;
     width: 100%;
     height: 50px;
     border-bottom: 2px solid #162938;
     margin: 30px 0;
 }
-.input-box label{
+
+.input-box label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -204,11 +226,13 @@ transform: translateX(0);
     pointer-events: none;
     transition: .5s;
 }
+
 .input-box input:focus~label,
-.input-box input:valid~label{
- top:-5px ;   
+.input-box input:valid~label {
+    top: -5px;
 }
-.input-box input{
+
+.input-box input {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -216,17 +240,19 @@ transform: translateX(0);
     outline: none;
     font-size: 1em;
     color: #162938;
-    font-weight:600;
+    font-weight: 600;
     padding: 0 35px 0 5px;
 }
-.input-box .icon{
+
+.input-box .icon {
     position: absolute;
     right: 8px;
     font-size: 1.2em;
     color: #162938;
     line-height: 57px;
 }
-.remember-forget{
+
+.remember-forget {
     font-size: .9em;
     color: #162938;
     font-weight: 500;
@@ -234,19 +260,22 @@ transform: translateX(0);
     display: flex;
     justify-content: space-between;
 }
-.remember-forget label input{
+
+.remember-forget label input {
     accent-color: #162938;
     margin-right: 3px;
 }
-.remember-forget a{
+
+.remember-forget a {
     color: #162938;
     text-decoration: none;
 }
-.remember-forget a:hover{
+
+.remember-forget a:hover {
     text-decoration: underline;
 }
 
-.btn-1{
+.btn-1 {
     width: 100%;
     height: 45px;
     background: #162938;
@@ -258,50 +287,59 @@ transform: translateX(0);
     color: #ccc;
     font-weight: 500;
 }
-.login-register{
+
+.login-register {
     font-size: .9em;
     color: #162938;
     text-align: center;
     font-weight: 500;
-    margin: 25px 0 10px;
+    margin: 25px 10px;
 }
-.login-register p a{
+
+.login-register p a {
     color: #162938;
     text-decoration: none;
     font-weight: 600;
+    margin-top: 9px;
 }
-.login-register p a:hover{
+
+.login-register p a:hover {
     text-decoration: underline;
 }
 
 
 /*------------- Footer Section----------- */
 
-.footer{
+.footer {
     text-align: center;
-margin-top: 50px;
-background: black;
-color: white;
+    margin-top: 50px;
+    background: black;
+    color: white;
 }
-.footer h1{
+
+.footer h1 {
     font-size: 15px;
     margin: 25px 40px;
 }
-.footer p{
+
+.footer p {
     margin: 60x 10px;
     font-size: 12px;
 }
-.copywrite{
-   margin-bottom: -80px;
-   text-align: center; 
-   font-size: 15px;
-   padding-bottom: 20px;
+
+.copywrite {
+    margin-bottom: -80px;
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 20px;
 }
-.copywrite .fa-heart{
-   color: red;
+
+.copywrite .fa-heart {
+    color: red;
     font-size: 15px;
 }
-.footer hr{
+
+.footer hr {
     margin-top: 10px;
     background-color: #ccc;
 }
